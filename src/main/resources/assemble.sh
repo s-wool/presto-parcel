@@ -43,6 +43,7 @@ cmd = "env PATH=\"%s/../jdk/bin:\$PATH\" %s/presto-cli-${presto.version}-executa
 
 subprocess.call(cmd, shell=True)
 EOF
+chmod +x ${parcel_name}/bin/presto
 
 cp -a ${project.build.outputDirectory}/meta ${parcel_name}
 tar zcf ${parcel_name}.parcel ${parcel_name}/ --owner=root --group=root
