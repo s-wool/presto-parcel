@@ -33,6 +33,7 @@ presto_cli_download_url="https://repo1.maven.org/maven2/com/facebook/presto/pres
 
 curl -L -O $presto_cli_download_url
 mv presto-cli-${presto.version}-executable.jar ${parcel_name}/bin/
+chmod +x ${parcel_name}/bin/presto-cli-${presto.version}-executable.jar
 
 cat <<"EOF" > ${parcel_name}/bin/presto
 #!/usr/bin/env python
@@ -44,7 +45,7 @@ from os.path import realpath, dirname
 
 path = dirname(realpath(sys.argv[0]))
 arg = ' '.join(sys.argv[1:])
-cmd = "env PATH=\"%s/../jdk/bin:\$PATH\" %s/presto-cli-${presto.version}-executable.jar %s" % (path, path, arg)
+cmd = "env PATH=\"%s/../jdk/bin:$PATH\" %s/presto-cli-${presto.version}-executable.jar %s" % (path, path, arg)
 
 subprocess.call(cmd, shell=True)
 EOF
