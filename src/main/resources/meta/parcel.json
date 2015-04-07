@@ -1,0 +1,45 @@
+{
+	"schema_version": 1,
+	"name": "PRESTO",
+	"version": "${presto.version}",
+	"setActiveSymlink": true,
+	"scripts": {
+            "defines": "presto_env.sh"
+	},
+
+	"packages": 
+	[
+		{
+			"name": "presto",
+			"version": "${presto.version}"
+		}
+	],
+
+	"components": 
+	[
+		{
+			"name": "presto",
+			"version": "${presto.version}"
+		}
+	],
+
+	"provides": 
+	[
+		"presto"
+	],
+
+	"users": 
+	{
+		"presto": 
+		{
+			"longname": "Presto",
+			"home": "/var/lib/presto",
+			"shell": "/sbin/nologin",
+			"extra_groups": [ ]
+		}
+	},
+	"groups": 
+	[
+		
+	]
+}

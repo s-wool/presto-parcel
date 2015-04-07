@@ -1,0 +1,9 @@
+{
+	"presto": 
+	{
+		"destination": "/usr/bin/presto",
+		"source": "bin/presto",
+		"priority": 10,
+		"isDirectory": false
+	}
+}
