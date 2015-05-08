@@ -1,5 +1,5 @@
 #!/bin/bash
 
-PRESTO_DIRNAME=${PARCEL_DIRNAME:-"PRESTO-${presto.version}"}
+PRESTO_DIRNAME=${PARCEL_DIRNAME:-"${project.build.finalName}"}
 export CDH_PRESTO_HOME=$PARCELS_ROOT/$PRESTO_DIRNAME
 export CDH_PRESTO_JAVA_HOME=$CDH_PRESTO_HOME/jdk

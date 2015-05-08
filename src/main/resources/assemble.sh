@@ -3,7 +3,7 @@
 pushd .
 cd ${project.build.directory}
 
-parcel_name="${project.artifactId}-${presto.version}.presto${csd.version}"
+parcel_name="${project.build.finalName}"
 mkdir $parcel_name
 
 jdk_download_url="http://download.oracle.com/otn-pub/java/jdk/${jdk.version}-${jdk.build}/jdk-${jdk.version}-linux-x64.tar.gz"

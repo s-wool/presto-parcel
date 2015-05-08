@@ -9,6 +9,8 @@
   <name>presto-parcel</name>
 
   <build>
+    <finalName>${project.artifactId}-${parcel.version}</finalName>
+
     <plugins>
       <plugin>
         <artifactId>exec-maven-plugin</artifactId>
@@ -40,9 +42,9 @@
   </build>
 
   <properties>
-    <csd.version>0.1</csd.version>
     <presto.version>0.100</presto.version>
     <jdk.version>8u40</jdk.version>
     <jdk.build>b26</jdk.build>
+    <parcel.version>${presto.version}.presto${project.version}</parcel.version>
   </properties>
 </project>
