@@ -43,8 +43,8 @@
 
   <properties>
     <presto.version>0.100</presto.version>
-    <jdk.version>8u40</jdk.version>
-    <jdk.build>b26</jdk.build>
+    <jdk.version>8u66</jdk.version>
+    <jdk.build>b17</jdk.build>
     <parcel.version>${presto.version}.presto${project.version}</parcel.version>
   </properties>
 </project>
