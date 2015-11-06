@@ -5,6 +5,10 @@ presto for Cloudera Manager parcel
 
 `mvn package`
 
+# Deploy
+
+https://github.com/cloudera/cm_ext/wiki/The-parcel-repository-format#structure-of-a-parcel-repository
+
 # About Presto
 
 https://prestodb.io/
